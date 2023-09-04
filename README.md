@@ -24,7 +24,7 @@ LENR has long been a subject of scientific curiosity and debate. Despite its pro
 - Data preprocessing scripts for LENR datasets [HuggingFace](https://huggingface.co/ConsciousEnergies)
 - Machine learning models for predicting LENR outcomes
 - Visualization tools for data analysis
-- A comprehensive guide to LENR and machine learning techniques
+- A comprehensive guide for creating a working LENR reactor design
 
 ## Installation
 
