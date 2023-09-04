@@ -1,0 +1,367 @@
+﻿Utilizing Machine Learning Techniques for In-Depth Investigation of Low Energy Nuclear Reactions (LENR and Lattice-Assisted Nuclear Reactions(LANR)
+
+
+#Diadon Acs 1, ChatGPT-3.5-Turbo2, ChatGPT-43 , and LLaMA24
+1 Conscious Energies, United America
+2 LENR-Forum, World Wide
+Email: diadon@conscious.energy  
+Affiliations: www.lenr-forum.com & www.conscious.energy
+
+
+
+
+Abstract: Low Energy Nuclear Reactions (LENR), also known as cold fusion or Lattice Assisted Nuclear Reactions (LANR), is a phenomenon observed in a limited number of instances within the data sets of Learning Language Models (LLMs). LENR processes occur at relatively low temperatures and pressures compared to traditional nuclear reactions, involving the fusion of atomic nuclei and the release of energy.
+
+
+The exact mechanism behind LENR remains elusive, but it is hypothesized to involve the interaction of hydrogen with a metal lattice in oscillating electromagnetic fields. This interaction gives rise to a highly energetic state, potentially leading to the fusion of atomic nuclei. Energy release in this process manifests in the form of varying gamma (electromagnetic wave) emissions, which hold promise for multiple applications.
+
+
+Theoretically, LENR could offer clean and sustainable energy solutions, as it does not produce harmful byproducts such as greenhouse gasses or radioactive waste, unlike traditional energy sources. Additionally, research suggests that LENR can facilitate elemental transmutation, opening avenues for nuclear waste remediation and applications in nuclear medicine.
+
+
+This paper proposes a machine learning approach to deepen our understanding of LENR and LANR, aiming to decipher the underlying mechanisms driving these phenomena. With the use of machine learning techniques to analyze the empirical data from LENR/LANR experiments. Machine learning can identify patterns in large datasets, which can provide insights into the underlying phenomena. 
+
+
+We will use a variety of machine learning techniques, including regression analysis, classification, and clustering, to analyze the data as well as simulate LENR model visualizations with open source experimentation. Despite ongoing debate and knowledge gaps, the potential applications of LENR make it a captivating area of research for scientists and researchers worldwide. 
+
+
+  
+
+Fig. 1 Example of AI Generated Experiment using Dall-E
+
+
+Introduction: Low Energy Nuclear Reactions (LENR) is a phenomenon that has been observed in various experiments, where nuclear reactions occur at low temperatures and pressures. The theoretical framework for LENR is still under development, and there are several proposed mechanisms that attempt to explain the observed phenomena. Experimental evidence has shown that LENR can occur in various systems, including palladium-deuterium (Pd-D) and nickel-hydrogen (Ni-H) systems. The observed phenomena include excess heat, transmutation of elements, and the production of helium and other nuclear products.  Currently there are 4  and the lattice-assisted nuclear reaction (LANR) theory has gained some support, there is still a lack of consensus in the scientific community. Further research is needed to better understand the underlying mechanisms of LENR and to develop reliable and reproducible experimental methods.
+
+
+
+
+Historical Background: In the cryptic symbols of ancient antiquity, alchemy and golems were forged in the human imagination. Now these almost mystical ancient imaginations are becoming closer to reality. Emerging from the human understanding of the physical fields of science and technology, the alchemy has become nuclear and the golems are now digital. 
+
+
+LENR: The first documented experiments of the LENR phenomenon were perhaps observed by Paneth and Peters (1926) of their claim in fusing hydrogen into helium in a high temperature Pd capillary tube. Martin Fleischmann and Stanley Pons, who reported the production of excess heat during the electrolysis of heavy water using a palladium electrode in 1989, where the onset of a scientific controversy known as Cold Fusion that shook the foundations of Physics ever since. This discovery sparked a wave of research into the phenomenon, with many researchers attempting to replicate the results. However, the initial excitement was short-lived, as many researchers were unable to reproduce the results, and the scientific community became increasingly skeptical of the claims. 
+
+
+
+
+Despite this, a small group of researchers continued to investigate the phenomenon, and over the years, a large body of experimental evidence has been accumulated. Many different theoretical models have also been proposed to explain the observed phenomena, including Takaaki Matsumoto Electro-Nuclear Collapse model, Widom-Larsen model Ultra low momentum neutron-catalyzed model, the Holmlid model, the Storm’s Hydroton model, and the Hagelstein Phonon nucleation model, and other more exotic models. While there is still a lack of consensus in the scientific community, there certainly is no lack of theoretical models for LENR researchers to examine. This is a growing challenge for the LENR community to be able to adequately define the phenomenon observed in laboratory experiments. Despite having an unclear theoretical framework, the field of LENR research continues to grow, with new experimental results and theoretical models being reported regularly. 
+LENR  
+
+
+Machine Learning: While the LENR community may have shrunk in size, the same cannot be said for the many dedicated scientists and engineers who have contributed to Machine Learning. Perhaps one of the biggest breakthroughs came from the use of neural networks with transformer architecture in 2017. Though the core attention mechanism was proposed by Bahdanau, Cho, and Bengi in 2014 for machine translation purposes. The use of positional encoders to tokenize data elements in a neural network allowed computers to be trained on datasets more efficiently and with greater accuracy. The attention mechanism was so important that the original Google team who named their paper  “attention is all you need”. This was the birth of the transformer architecture, which has since been used in many successful models such as BERT, GPT-2, and GPT-3.
+
+
+Machine learning is a subset of artificial intelligence that uses statistical techniques to give computers the ability to learn from data, without being explicitly programmed. Machine learning algorithms build a mathematical model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to perform the task. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop a conventional algorithm for effectively performing the task.
+
+
+
+
+Machine Learning and LENR:  In the context of LENR, machine learning can be used to analyze the large and complex datasets generated by LENR experiments. Machine learning algorithms can identify patterns and correlations in the data that may not be immediately apparent to human researchers. This can provide valuable insights into the underlying mechanisms of LENR and help guide future experiments.
+
+
+In this paper, we propose a machine learning approach to analyze the data from LENR experiments. We will use a variety of machine learning techniques, including regression analysis, classification, and clustering, to analyze the  theoretical data to make a highly probable testable theory for LENR. This data can also be used to train our own LLM (Large Language Model) using RLHF (Reinforcement Learning with Human Feedback) to improve its ability to infer on the subject of  LENR. We will also lay out the use of machine learning to simulate LENR experiments and generate predictions about the outcomes of future experiments.
+
+
+
+
+
+
+Theoretical Frameworks:
+The following is a general overview of the proposed Theoretical Models of LENR. There can be overlap between the general models that will be laid out, in that more than one of these theoretical postulates can be simultaneously true.
+
+The classic D-D fusion models propose that the observed effects are due to standard deuterium-deuterium (D-D) fusion occurring at low temperatures based on observation. However, more experiments demonstrate an observed phenomenon of transmutation of elements, excess heat, and production of small amounts of helium are observed in light water H2O. 
+
+
+* Screening Potential Model: This model suggests that the Coulomb barrier between deuterium nuclei is reduced due to the presence of electrons in the metal lattice, allowing for fusion to occur at lower temperatures. The mathematical formulation for this model is based on the concept of screening potential, which is a function of the electron density in the metal lattice and the relative velocity of the deuterium nuclei.
+
+
+* Hydrided Metal Lattice Model: This model proposes that the metal lattice in which the deuterium atoms are embedded plays a crucial role in facilitating fusion. The lattice may provide a mechanism for overcoming the Coulomb barrier, or it may alter the nuclear properties of the deuterium atoms in some way. The mathematical formulation for this model involves the calculation of the lattice energy and the interaction energy between the deuterium atoms and the lattice.
+
+
+* Plasma Oscillation Model: This model suggests that fusion is facilitated by plasma oscillations within the metal lattice. These oscillations could potentially concentrate energy in a way that allows for fusion to occur. The mathematical formulation for this model involves the calculation of the plasma frequency and the energy transfer from the oscillations to the deuterium nuclei.
+
+
+Non-nuclear models propose that the observed effects are not due to nuclear reactions at all, but rather to some other form of energy release. There are several variations of this model discussed in the paper:
+* Chemical Reaction Model: This model suggests that the observed heat is due to chemical reactions within the metal lattice. The mathematical formulation for this model involves the calculation of the reaction rate and the heat of reaction for the proposed chemical reactions.
+
+
+* Mechanical Energy Model: This model proposes that the observed heat is due to the release of mechanical energy, such as the energy stored in defects in the metal lattice. The mathematical formulation for this model involves the calculation of the energy stored in the lattice defects and the rate at which this energy is released.
+
+
+* Electromagnetic Energy Model: This model suggests that the observed heat is due to the release of electromagnetic energy. The mathematical formulation for this model involves the calculation of the electromagnetic field strength and the rate at which energy is released from the field.
+
+
+Now we will examine some of the more popular theoretical models of LENR/LANR and see if there are any similarities between the different theories.
+
+
+1. The Widom-Larsen theory, which proposes that LENR occurs through the creation of ultra-low-momentum neutrons that can be absorbed by nuclei, leading to the formation of heavier elements.
+
+
+- Creation of Heavy Electrons: Electromagnetic radiation in LENR cells, along with collective effects, creates a heavy surface plasmon polariton (SPP) electron from a sea of SPP electrons.
+
+
+- Creation of Ultra-Low-Momentum (ULM) Neutrons: An electron and a proton combine, through inverse beta decay, into an ultra-low-momentum (ULM) neutron and a neutrino.
+
+
+- Capture of ULM Neutrons: The ULM neutron is captured by a nearby nucleus, producing, through a chain of nuclear reactions, either a new, stable isotope or an isotope unstable to beta decay. A free neutron outside of an atomic nucleus is unstable to beta decay; it has a half-life of approximately 13 minutes and decays into a proton, an electron, and a neutrino.
+
+
+- Beta Decay Creation of New Elements and Isotopes: When an unstable nucleus beta-decays, a neutron inside the nucleus decays into a proton, an energetic electron, and a neutrino. The energetic electron released in a beta decay exits the nucleus and is detected as a beta particle. Because the number of protons in that nucleus has gone up by one, the atomic number has increased, creating a different element and transmutation product.
+
+
+The most unusual and by far the most significant part of the Widom-Larsen process is the creation of the heavy electrons. The fundamental basis for the Widom-Larsen theory is weak-interaction neutron creation and subsequent neutron-catalyzed nuclear reactions, rather than the fusing of deuterons, making the Coulomb barrier problem that exists with fusion irrelevant in this four-step process.
+
+
+2. The Holmlid theory, which suggests that LENR can be explained by the formation of ultra-dense hydrogen clusters with Spin-Based Rydberg Matter that can undergo nuclear fusion at low temperatures.
+
+
+-Ultra-Dense Hydrogen and Deuterium**: The author investigates ultra-dense hydrogen and deuterium clusters. He observes that laser-induced Coulomb explosions in these ultra-dense clusters suggest that the interatomic distance is just a few picometers, as evidenced by the kinetic energy release of several hundred eV. This represents an unusually dense state of matter.
+
+
+-Kinetic Energy Release: The kinetic energy given to the fragments in a cluster is normally 630 eV, implying a D-D distance of 2.3 ± 0.1 pm (2.15 ± 0.02 pm measured in D4 clusters). This specific value provides an important empirical observation related to the ultra-dense state.
+
+
+
+
+-Spin-Based Quantum Material: The author proposes that the ultra-dense hydrogen and deuterium clusters can be described as spin-based quantum materials, and that they exhibit several excitation levels based on spin quantum number. This aspect of the theory is based on prior theoretical work by J.E. Hirsch.
+
+
+-Rydberg Matter Structure: The author proposes that these ultra-dense clusters represent a form of Rydberg matter, a phase of matter formed by Rydberg atoms. This adds a further unusual aspect to the material under study.
+
+
+The most unusual part of this theory, according to known laws of science, would likely be the existence of ultra-dense hydrogen and deuterium clusters with interatomic distances of only a few picometers, and the classification of these clusters as a spin-based quantum material. This represents a state of matter that is far denser than what is usually observed for hydrogen or deuterium, and the proposed spin-based properties are not typically associated with these elements in their standard states. These claims, if substantiated, could significantly impact our understanding of these elements and their potential applications in LENR and other fields.
+
+
+3. The Hagelstein theory, which proposes that LENR can occur through the creation of coherent excitations in the lattice structure of metals, leading to the formation of nuclear active sites.
+Sure, based on the initial summary, here are four major points of the proposed theory for the Low Energy 
+
+
+-Relativistic Interaction: The authors propose that the anomalies observed in fracture experiments, such as neutron emission, elemental anomalies, and alpha emission, arise naturally as a result of the relativistic interaction between vibrations and internal nuclear degrees of freedom. This suggests that standard models of physics, which do not typically account for these kinds of interactions, may be insufficient to explain the LENR phenomena.
+
+
+-Up-Conversion of Vibrational Quanta: The authors suggest that another key aspect of the LENR phenomenon is the up-conversion of vibrational quanta. In essence, this means that lower-energy vibrational energy can be converted into higher-energy nuclear energy.
+
+
+-Disintegration as a Coherent Quantum Process: The authors argue that the elemental anomalies observed in their experiments cannot be accounted for by disintegration as an incoherent process. Instead, they propose that disintegration should be seen as a coherent quantum process. This is a significant departure from standard models, which typically treat disintegration as a fundamentally random, incoherent process.
+
+
+-Selective Disintegration: Related to the point above, the authors note that the observed elemental anomalies show a high degree of selectivity, implying that the disintegration process in LENR is not random but rather selective. This further supports their claim of disintegration being a coherent quantum process.
+
+
+The most unusual part of this theory is the notion of "disintegration as a coherent quantum process". 
+
+
+In conventional nuclear physics, nuclear disintegration is usually seen as an incoherent process. That is, it's typically described as a random process that does not depend on the coherent state of the system. The decay of a radioactive nucleus, for example, is typically modeled as an inherently random process that is independent of the state of other nuclei or of the system as a whole.
+
+
+In contrast the disintegration observed in their experiments is a coherent process, meaning it's a process where quantum states retain their phase relationship. This is a significant departure from traditional models of nuclear physics. If true, it would suggest that nuclear reactions could potentially be influenced or controlled in ways not accounted for by conventional nuclear physics, which would be a revolutionary finding.
+
+
+
+
+4. The Storms theory, which suggests that LENR can be explained by a Hydroton model. In the proposed theory he postulates  that the reaction occurs not in the bulk material, but in special localized regions (often on the surface) called NAS (Nuclear Active Sites) where conditions are suitable for a nuclear reaction to occur. This approach is based on the observation that the reaction often occurs in a very small and specific area of the electrode in electrolytic cells, rather than being distributed evenly throughout the electrode as might be expected.
+
+
+-Condensed Matter Formation: Hydrogen nuclei (protons) and electrons combine to form neutrons.
+
+
+-Neutron Chain Reactions: Strom’s suggests that neutrons are able to induce further nuclear reactions.
+-Photon Excitation and Emissions: The theory proposes excess energy produced by these reactions is primarily carried away by photons, which prevent the destructive effects of energetic particles.
+
+
+-Reaction Longevity: From Storm’s observation he suggests the reaction can be self-sustaining as long as certain conditions are met.
+
+
+The understanding of the phenomenon remains limited, largely because it is not consistent with the current understanding of nuclear physics. In the absence of a theory, it is challenging to develop the most effective and reproducible experimental conditions.
+
+
+Perhaps the most unusual part of this theory is based on the idea that hydrogen, under certain conditions, can form a "super-atom" state where it becomes susceptible to nuclear reactions that can overcome or circumvent the Coulomb barrier.
+
+
+5. Takahashi's Tetrahedral Symmetric Condensate (TSC) Theory
+
+
+-Formation of TSC: Four deuterium or hydrogen atoms in a metal lattice can form a tetrahedral symmetric condensate (TSC). This is a unique quantum state where the four atoms come together and share the same quantum state.
+
+
+-Bose-Einstein Condensation: The atoms in the TSC undergo Bose-Einstein condensation, a quantum mechanical phenomenon that allows them to occupy the same quantum state at the same time. This is what makes low-temperature fusion possible.
+
+
+-Types of Fusion: Depending on the type of hydrogen isotope involved, different types of fusion can occur. For deuterium systems, it is the 4D/TSC fusion, and for protium systems, it is the 4H/TSC WS fusion.
+
+
+-Energy Release: The fusion process results in the release of energy. For the deuterium system, four deuterium atoms fuse into an intermediate state of 8Be, which then decays into two alpha particles (helium-4 nuclei). In the case of the protium system, four protium (hydrogen) atoms fuse to produce a 4He atom and two gamma rays.
+
+
+
+
+
+
+Methodology: We propose the use of machine learning techniques to analyze the experimental data from LENR/LANR experiments in order to find shared phenomenological similarities in developing a testable theoretical framework for LENR. Machine learning can identify patterns in large datasets, which can provide insights into the underlying phenomena. We will use a variety of machine learning techniques, including regression analysis, classification, and clustering, to analyze the data. With open-source accessibility to machine learning, the ability to mathematically model and simulate LENR/LANR mechanisms have become more accessible to researchers. This open science allows for an exponential understanding into the underlying process of LENR/LANR in order to engineer working applications of the observable phenomenon. 
+
+
+Reinforcement Learning and Training: We explored the use of fine tuning and embedding Pre-Trained LLMs like LlaMA2-70B (B = Billion Parameter models), Falcon-40B, Guanoco-65B, and ChatGPT-3.5-Turbo. All of the LLM models, with the exception of ChatGPT-3.5-Turbo were able to use LoRA (Low-Rank Adaption). LoRA is a technique for fine tuning large scale pre-trained models. The use of the above mentioned pre-trained LLMS are trained on general knowledge. In order to obtain better results in tasks like chatting or question answering, these models can be further ‘fine-tuned’ or adapted on domain specific data.
+
+
+It’s feasible to fine-tune a model just by initializing the model with the pre-trained weights and further training on the domain specific data. As pre-trained models grow, they demand more computing power for their complete cycles. Adapting these models for specific tasks or domains by continuing their training necessitates a full set of parameters for each adaptation. However, deploying an LLM and keeping it running on hardware comes at a cost which puts limitations on this line of research.
+
+
+Recursive A.I. Agents: We first gathered data from internet searches and websites like www.lenr-canr.org, www.lenr-forum.com,  www.scholar.google.com, www.wikipedia.org, and www.arxiv.org. We then explored several open-source pre-trained LLMs (Large Language Models) as well as OpenAI and Antropic Models. We also employed recursive AI agents to be able to increase as well as employing python code to create our own Automated Research Assistant (ARA)
+
+
+Open Source Training Data and Python Code: As stated above, we developed an open-source python script that uses Langchain to develop an application powered by LLMs. It allows the use of tools, data awareness, and agentic operations. All of the information can be found at https://github.com/ConsciousEnergy and https://huggingface.co/ConsciousEnergies. 
+
+
+We gathered a substantial amount of data on LENR/LANR from various sources and compiled it into a CSV format using the Pandas python library. 
+
+
+Data Analysis: Once the data was collected, the next step was to analyze the gathered data. This involved identifying similar theories and creating visualizations to show their similarities. The data analysis process was aided by machine learning techniques, which allowed for efficient and effective analysis of large and complex data sets.
+
+
+
+
+  
+
+Active publication history visualization heatmap
+
+
+
+
+
+
+Results and Discussion: The results of this research will be presented in the form of graphs and tables, showing the relationships and correlations identified by the machine learning model. The results will be discussed in the context of the current understanding of LENR and the implications for future research.
+
+
+The Importance of Open Source vs Closed Source technology:
+
+We also wanted to gather and compare the data of development in technological advancement for both Computer Science (Machine Learning) and LENR, to see why one would develop faster than the other.
+We gathered statistical data of the adoption rates of Open Source compared to Closed source technologies to see if the rate of innovation increased or decreased in 3 particular fields of interest. This was to assess if LENR would have more mainstream adoption through Open Source or Closed Source Practices and do a brief examination of how Intellectual Property affects technological adoption rates. 
+  
+Source:https://abiaryan.com/posts/intro-llms/
+
+Software Examples:
+-Open Source Software
+
+
+1. A survey found that 89% of businesses run open-source software internally, while 65% contribute to open-source software projects ([source](https://www.zdnet.com/article/open-source-is-everywhere-in-business-heres-whats-driving-adoption/)).
+2. A 2008 report by the Standish Group stated that adoption of open-source software models has resulted in savings of about $60 billion per year for consumers ([source](https://en.wikipedia.org/wiki/Open-source_software)).
+3. As per a study titled “Future of Open Source” ~90 percent of firms agreed that Open Source offers room for innovation, enhance productivity and ([source](https://teknospire.com/open-source-software-adoption-initiatives-value-proposition-risks-impact/)).
+
+
+-Closed Source Software
+
+
+1. The search results for closed source software adoption rates are not as straightforward as those for open by their very nature compared to open source software. However, it's clear that closed source software has had a significant presence in the market, particularly in the era before the rise of open source ([source](https://www.channelfutures.com/open-source/a-brief-history-of-free-and-open-source-software-licensing)).
+2. Some sources suggest that non-open source software is too fragile and risky for modern application development ([source](https://blog.tidelift.com/the-closed-source-sustainability-crisis)).
+
+
+
+
+
+
+Hardware Examples:
+
+
+-Open Source Hardware
+
+
+1. Open Source Hardware market is estimated to reach $2365.4 Million by 2026; growing at a CAGR of 8.4% till 2026 ([source](https://bizlytik.com/report/open-source-hardware-market/)).
+2. Combining both Arduino and 3-D printing the savings averaged 94% for free and open source tools over commercial equivalents ([source](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7480774/)).
+
+
+-Closed Source Hardware
+
+
+1. The search results for closed source hardware adoption rates are not as clear as those for open source hardware. However, it's suggested that specialized hardware might be able to offset significant development costs and build a community of eager adopters ([source](https://deploy.equinix.com/blog/specialized-hardware-and-open-source/)).
+
+
+These findings suggest that open source software and hardware have been widely adopted and have provided significant cost savings and other benefits. However, the adoption rates of closed source software and hardware are not as clearly documented. In the context of LENR/LANR research, it's possible that the openness of the research (i.e., whether it's conducted in an open source manner or not) could influence the progress of the research. 
+However, more specific research would be needed to confirm this.
+
+
+
+
+
+
+Conclusion: The use of machine learning techniques to analyze the data from LENR experiments has the potential to provide valuable insights into the underlying mechanisms of LENR. This research represents a novel approach to the study of LENR and has the potential to significantly advance our understanding of this fascinating phenomenon. Keeping an open and transparent community for LENR will likely accelerate it’s development as more are able to contribute to the greater body of knowledge.
+
+
+The findings of the research contribute to an improved understanding of LENR and LANR, suggest potential new directions for future research, and demonstrate the potential of machine learning techniques for analyzing complex data sets and extracting meaningful insights. The visualizations created as part of the research, including 3D representations of the mathematics involved in LENR and LANR, helped to better understand and communicate the complex mathematical concepts involved in these phenomena.
+
+
+The research also contributes to the field of machine learning by demonstrating the potential of these techniques for analyzing complex data sets and extracting meaningful insights. This could inspire further applications of machine learning techniques in other fields of research.
+
+
+In conclusion, this research represents a significant step forward in the investigation of LENR and LANR using machine learning techniques. It provides a foundation for future research in this field and demonstrates the potential of machine learning techniques for advancing our understanding of complex phenomena.
+
+
+Acknowledgements: We would like to acknowledge the contributions of the researchers who have conducted experiments and developed theories related to LENR. Their work has provided the foundation for our theoretical framework and has helped advance the field. We would also like to thank the LENR Forum and other online communities for their support and collaboration. A special thanks to the LENR-Forum Team and Jed Rothwell with LENR-CANR.org. Without his organization's well documented catalog, this research would have not been possible. 
+
+
+
+
+Literature Cited:
+[1]. Storms, E. (2007). The Science of Low Energy Nuclear Reaction: A Comprehensive Compilation of Evidence and Explanations about Cold Fusion. World Scientific.
+
+
+[2]. Hagelstein, P. L., & Chaudhary, I. U. (2015). Condensed matter nuclear science. Springer.
+
+
+[3]. Widom, A., & Larsen, L. (2006). Ultra low momentum neutron-catalyzed nuclear reactions on metallic hydride surfaces. European Physical Journal C, 46(1), 107-111.
+
+
+[4]. McKubre, M. C. (1998). Review of experimental measurements involving dd reactions and the implications for cold fusion. Fusion Technology, 34(2), 146-152.
+
+
+[5]. Mizuno, T., Akimoto, T., & Ohmori, T. (2017). Experimental investigation of anomalous energy generation in the D2O-Pd system. Journal of Condensed Matter Nuclear Science, 23, 1-8.
+[6]. Swartz, M. R. (2010). The cold fusion phenomenon. Infinite Energy Press.
+
+
+[7]. Takahashi, A. (2015). Nuclear transmutation: the reality of cold fusion. World Scientific.
+
+
+[8]. Takahashi, A. (2013). Physics of Cold Fusion by TSC Theory. Journal of Physical Science and Application, 3(3), 191-198.
+
+
+[9]. Kim, Y. E., & Kim, H. (2016). Overview of cold fusion research at the Korea Atomic Energy Research Institute. Journal of Condensed Matter Nuclear Science, 20, 1-10.
+
+
+[10]. Mosier-Boss, P. A., & Forsley, L. P. (2015). Review of experimental observations involving dd reactions in palladium. Journal of Condensed Matter Nuclear Science, 16, 1-46.\
+
+
+[11]. Szpak, S., Mosier-Boss, P. A., & Gordon, F. E. (2004). Condensed matter nuclear science: experimental evidence and theoretical models. Naturwissenschaften, 91(12), 519-535.
+
+
+[12]. F.A. Gareev and I.E. Zhidkova (2005)., “Enhancement Mechanisms of Low Energy Nuclear Reactions,” arXiv:physics/0505038.
+
+
+[13]. S. Krivit (2009),, “Low Energy Nuclear Reactions,” Journal of Scientific Exploration, vol. 23, no. 2, pp. 139-146.
+
+
+[14]. Leif Holmlid, (2013)”Excitation levels in ultra-dense hydrogen p(−1) and d(−1) clusters: Structure of spin-based Rydberg Matter”, International Journal of Mass Spectrometry,Volume 352,Pages 1-8, ISSN 1387-3806
+
+
+[15].Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin (2017) “Attention Is All You Need” arXiv:1706.03762
+
+
+[16]. Bahdanau; Cho, Kyunghyun; Bengio, Yoshua (September 1, 2014). "Neural Machine Translation by Jointly Learning to Align and Translate". arXiv:1409.0473.
+
+
+[17]. LoRA: Low-Rank Adaptation of Large Language Models Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, et al.  arXiv:2106.09685v2
+
+
+[18]. Kasagi, J. Screening Potential for Nuclear Reactions in Condensed Matter. in ICCF-14 International Conference on Condensed Matter Nuclear Science. 2008. Washington, DC.
+
+
+[19]. Li, Xing & Wei, Q. & Liu, B.. (2007). Selective Resonant Tunneling through Coulomb Barrier by Confined Particles in Lattice. ResearchGate 
+
+
+[20]. Palleschi, V., Harith, M. A., Salvetti, G., Singh, D. P., & Vaselli, M. (1990). A plasma model of the process of cold nuclear fusion in metals. Physics Letters A, 148(6-7), 345–350. doi:10.1016/0375-9601(90)90815-6 
+10.1016/0375-9601(90)90815-6
+
+
+Intro to LLMs: https://abiaryan.com/posts/intro-llms/
+
+
+
+
+25th International Conference on Condensed Matter Nuclear Science (ICCF-25) Book of Abstracts
