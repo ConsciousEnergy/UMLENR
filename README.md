@@ -21,7 +21,7 @@ LENR has long been a subject of scientific curiosity and debate. Despite its pro
 
 ## Features
 
-- Data preprocessing scripts for LENR datasets
+- Data preprocessing scripts for LENR datasets [HuggingFace](https://huggingface.co/ConsciousEnergies)
 - Machine learning models for predicting LENR outcomes
 - Visualization tools for data analysis
 - A comprehensive guide to LENR and machine learning techniques
@@ -35,7 +35,6 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-Detailed Turtorial coming soon
 
 Detailed instructions on how to use the project are coming... please be patient
 
