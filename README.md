@@ -1,4 +1,4 @@
-##UMLENR
+## UMLENR
 Utilizing Machines for Low Energy Nuclear Reactions. 
 *Work in Progress*
 ##Overview
