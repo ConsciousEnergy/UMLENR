@@ -50,5 +50,5 @@ This project is licensed under the GNU-3.0 License - see the [LICENSE.md](LICENS
 
 - Special thanks to [LENR-LANR.org](https://lenr-canr.org) for his extensive open access library to LENR.
 - Shoutout to the machine learning community for providing invaluable resources and tools.
-  [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT)
-  [Langchain](https://github.com/langchain-ai/langchain) 
+- [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT)
+- [Langchain](https://github.com/langchain-ai/langchain) 
