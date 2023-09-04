@@ -1,10 +1,10 @@
 Utilizing Machine Learning Techniques for In-Depth Investigation of Low Energy Nuclear Reactions (LENR and Lattice-Assisted Nuclear Reactions(LANR)*Pre-Print*
 
-#Diadon Acs 1, ChatGPT-3.5-Turbo2, ChatGPT-43 , and LLaMA24
-1 Conscious Energies, United America
-2 LENR-Forum, World Wide
+Diadon Acs , ChatGPT-3.5-Turbo, ChatGPT-4 , and LLaMA2
+Conscious Energies, United America
+LENR-Forum, World Wide
 Email: diadon@conscious.energy  
-Affiliations: www.lenr-forum.com & www.conscious.energy
+Affiliations: [LENR-Forum](https://www.lenr-forum.com) [ConscousEnergy](https://conscious.energy)
 
 
 Abstract: Low Energy Nuclear Reactions (LENR), also known as cold fusion or Lattice Assisted Nuclear Reactions (LANR), is a phenomenon observed in a limited number of instances within the data sets of Large Language Models (LLMs). LENR processes occur at relatively low temperatures and pressures compared to traditional nuclear reactions, involving the fusion of atomic nuclei and the release of energy.
