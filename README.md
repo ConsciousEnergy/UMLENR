@@ -31,7 +31,6 @@ LENR has long been a subject of scientific curiosity and debate. Despite its pro
 
 ```bash
 git clone https://github.com/ConsciousEnergies/UMLENR.git
-cd ML_for_LENR
 pip install -r requirements.txt
 ```
 
