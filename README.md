@@ -2,7 +2,7 @@
 
 Utilizing Machines for Low Energy Nuclear Reactions. 
 *Work in Progress*
-##Overview
+## Overview
 
 This repository aims to explore the application of machine learning algorithms to better understand and optimize Low Energy Nuclear Reactions (LENR). By leveraging data analytics and machine learning, we hope to shed light on the complex mechanisms behind LENR, thereby accelerating its development as a clean and abundant energy source.
 
