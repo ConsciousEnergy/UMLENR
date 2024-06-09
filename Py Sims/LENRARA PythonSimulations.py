@@ -1,3 +1,7 @@
+##LENRARA Python Simulation Suite (WORK IN PROGRESS)
+#The following is  a set of computational function variables to help us simulate Hydrogen Fusion Processes in Condensed Matter Nuclar Science
+#License GNU 3.0 Conscious Energy 2024
+
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
