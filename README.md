@@ -39,54 +39,20 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Photo-Electric Effects Simulation
-This simulation models electron densities and momentum in the photoelectric effect in hydrogen. The source code can be found [here](https://github.com/ConsciousEnergy/UMLENR/blob/main/Py%20Sims/photoelectric_simulation.py).
+### 2D LCF Model
+This simulation models 2D Lattice Confinement Fusion. The source code can be found [here](https://github.com/ConsciousEnergy/UMLENR/blob/main/Py%20Sims/2d_LCF_model.py).
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-from scipy.constants import h, c, e, m_e
+### LENRARA CMNS Lattice PySim
+Simulates interactions and calculates total energy in a cubic array of electrons. The source code can be found [here](https://github.com/ConsciousEnergy/UMLENR/blob/main/Py%20Sims/LENRARA_CMNS_Lattice_PySim.py).
 
-# Define your function here...
+### LENRARA Photo-Electric PySim
+Models electron densities and momentum in the photoelectric effect in hydrogen. The source code can be found [here](https://github.com/ConsciousEnergy/UMLENR/blob/main/Py%20Sims/LENRARA_Photo-Electric_PySim.py).
 
-# Example usage
-wavelengths = np.linspace(1e-10, 1e-6, 100)
-intensities = np.linspace(1e1, 1e5, 100)
-plot_results(wavelengths, intensities, scale='quantum')
-```
+### LENRARA PySimSuite
+A suite of simulations for various LENR phenomena. The source code can be found [here](https://github.com/ConsciousEnergy/UMLENR/blob/main/Py%20Sims/LENRARA_PySimSuite.py).
 
-### Electron Interaction Simulation
-Simulates interactions and calculates total energy in a cubic array of electrons. The source code can be found [here](https://github.com/ConsciousEnergy/UMLENR/blob/main/Py%20Sims/electron_interaction_simulation.py).
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-from scipy.integrate import odeint
-
-# Define your function here...
-
-# Example usage
-ani = FuncAnimation(fig, update, frames=len(distances), interval=1, repeat=False)
-plt.show()
-```
-
-### Decay Process Simulation
-Models the decay processes of various isotopes, including tritium and short-lived hydrogen isotopes. The source code can be found [here](https://github.com/ConsciousEnergy/UMLENR/blob/main/Py%20Sims/decay_process_simulation.py).
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.integrate import odeint
-
-# Define your function here...
-
-# Example usage
-plt.plot(time_array, solution_tritium[:, 0], label='Tritium')
-plt.plot(time_array, solution_tritium[:, 1], label='Helium-3')
-plt.show()
-```
+### Lattice Boltzmann MHD PySim
+Simulates MagnetoHydroDynamics using the Lattice Boltzmann method. The source code can be found [here](https://github.com/ConsciousEnergy/UMLENR/blob/main/Py%20Sims/Lattice_Boltzmann_MHD_PySim.py).
 
 ## Contributing
 
