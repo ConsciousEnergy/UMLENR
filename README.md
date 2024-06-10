@@ -54,6 +54,24 @@ A suite of simulations for various LENR phenomena. The source code can be found 
 ### Lattice Boltzmann MHD PySim
 Simulates MagnetoHydroDynamics using the Lattice Boltzmann method. The source code can be found [here](https://github.com/ConsciousEnergy/UMLENR/blob/main/Py%20Sims/Lattice_Boltzmann_MHD_PySim.py).
 
+### LENR AutoGPT Simulations
+- **LENRAutoGPT.py**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/LENRAutoGPT.py)
+- **LENRAutoGPT_v0_2.py**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/LENRAutoGPT_v0_2.py)
+- **LENRAutoGPT_v0_3.py**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/LENRAutoGPT_v0_3.py)
+
+### Research Papers and Theoretical Models
+- **LENR_ML_Recursive_Research_paper_Draft.txt**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/LENR_ML_Recursive_Research_paper_Draft.txt)
+- **LENR_Theories**: [Directory](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/LENR_Theories)
+- **LENR_Theories.csv**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/LENR_Theories.csv)
+- **LENR_theoretical_model.py**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/LENR_theoretical_model.py)
+
+### Simulation and Development Scripts
+- **LENRsimCrew.py**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/LENRsimCrew.py)
+- **R&DWrite_crew.py**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/R&DWrite_crew.py)
+- **Simulation_Equations.txt**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/Simulation_Equations.txt)
+- **lenr_simulation.py**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/lenr_simulation.py)
+- **llama-2-70b-chat-agent(raw-code).ipynb**: [Source Code](https://github.com/ConsciousEnergy/UMLENR/blob/main/LENR_ARA_GPT/llama-2-70b-chat-agent%28raw-code%29.ipynb)
+
 ## Contributing
 
 We welcome contributions! Please see the [CONTRIBUTING.md](https://github.com/ConsciousEnergy/UMLENR/blob/main/CONTRIBUTING.md) file for details on how to get involved.
