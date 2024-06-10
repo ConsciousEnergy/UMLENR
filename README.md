@@ -66,9 +66,11 @@ This project is licensed under the GNU-3.0 License - see the [LICENSE](https://g
 
 - Special thanks to [LENR-LANR.org](http://lenr-canr.org/) for its extensive open access library to LENR.
 - Shoutout to the machine learning community for providing invaluable resources and tools:
+  - [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT.git)
   - [LangChain](https://www.langchain.com/)
   - [CrewAI](https://www.crewai.com/)
-  - [OpenAI](https://www.openai.com/)
+  - [Ollama](https://www.ollama.com/)
   - [Meta AI](https://ai.facebook.com/)
+  - [OpenAI](https://www.openai.com/)
 
 By harnessing the capabilities of machine learning and fostering collaborative efforts, UMLENR aims to make significant advancements in understanding and harnessing LENR and LANR, paving the way for groundbreaking developments in clean energy technology.
