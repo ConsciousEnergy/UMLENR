@@ -6,6 +6,8 @@
 
 This repository explores the application of machine learning algorithms to better understand and optimize Low Energy Nuclear Reactions (LENR) and Lattice-Assisted Nuclear Reactions (LANR). By leveraging data analytics and machine learning, we aim to shed light on the complex mechanisms behind LENR, accelerating its development as a clean and abundant energy source.
 
+![UMLENRPorjectLogo](https://github.com/ConsciousEnergy/UMLENR/assets/23019934/63ef47ed-e045-4ea0-b909-aaff1a1acfd6)
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Features](#features)
