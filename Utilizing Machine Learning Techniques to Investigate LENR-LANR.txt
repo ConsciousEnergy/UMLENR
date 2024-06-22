@@ -1,8 +1,7 @@
 Utilizing Machine Learning Techniques for In-Depth Investigation of Low Energy Nuclear Reactions (LENR and Lattice-Assisted Nuclear Reactions(LANR)*Pre-Print*
 
 Diadon Acs , ChatGPT-3.5-Turbo, ChatGPT-4 , and LLaMA2
-Conscious Energies, United America
-LENR-Forum, World Wide
+Conscious Energies, LENR-Forum, World Wide
 Email: diadon@conscious.energy  
 Affiliations: [LENR-Forum](https://www.lenr-forum.com) [ConscousEnergy](https://conscious.energy)
 
