@@ -5,9 +5,10 @@ import sys
 import os
 import time
 from datetime import datetime
+from pathlib import Path
 
-# Add backend to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'backend'))
+# Add backend to path - go up one level from scripts/ to project root, then into backend/
+sys.path.insert(0, str(Path(__file__).parent.parent / 'backend'))
 
 def test_physics_modules():
     """Test all physics modules."""
@@ -15,7 +16,7 @@ def test_physics_modules():
     print("=" * 60)
     
     try:
-        from core.integrated_simulation import IntegratedLENRSimulation, IntegratedParameters
+        from core.integrated_simulation import IntegratedLENRSimulation, IntegratedParameters  # type: ignore
         
         params = IntegratedParameters(
             loading_ratio=0.95,
@@ -25,11 +26,50 @@ def test_physics_modules():
         sim = IntegratedLENRSimulation(params)
         results = sim.calculate_total_enhancement(energy=10.0)
         
+        # Validate results - ensure values are numeric and within sensible bounds
+        import math
+        
+        # Check screening_energy
+        screening_energy = results['screening_energy']
+        if not isinstance(screening_energy, (int, float)) or math.isnan(screening_energy) or math.isinf(screening_energy):
+            raise AssertionError(f"screening_energy is not a valid number: {screening_energy}")
+        if screening_energy < 0:
+            raise AssertionError(f"screening_energy must be non-negative, got: {screening_energy} eV")
+        if screening_energy > 1e6:
+            raise AssertionError(f"screening_energy exceeds realistic bound (1e6 eV), got: {screening_energy} eV")
+        
+        # Check lattice_enhancement
+        lattice_enhancement = results['lattice_enhancement']
+        if not isinstance(lattice_enhancement, (int, float)) or math.isnan(lattice_enhancement) or math.isinf(lattice_enhancement):
+            raise AssertionError(f"lattice_enhancement is not a valid number: {lattice_enhancement}")
+        if lattice_enhancement < 1.0:
+            raise AssertionError(f"lattice_enhancement should be >= 1.0 (enhancement factor), got: {lattice_enhancement}x")
+        if lattice_enhancement > 1e6:
+            raise AssertionError(f"lattice_enhancement exceeds realistic bound (1e6x), got: {lattice_enhancement}x")
+        
+        # Check interface_enhancement
+        interface_enhancement = results['interface_enhancement']
+        if not isinstance(interface_enhancement, (int, float)) or math.isnan(interface_enhancement) or math.isinf(interface_enhancement):
+            raise AssertionError(f"interface_enhancement is not a valid number: {interface_enhancement}")
+        if interface_enhancement < 1.0:
+            raise AssertionError(f"interface_enhancement should be >= 1.0 (enhancement factor), got: {interface_enhancement}x")
+        if interface_enhancement > 1e6:
+            raise AssertionError(f"interface_enhancement exceeds realistic bound (1e6x), got: {interface_enhancement}x")
+        
+        # Check total_combined_enhancement
+        total_enhancement = results['total_combined_enhancement']
+        if not isinstance(total_enhancement, (int, float)) or math.isnan(total_enhancement) or math.isinf(total_enhancement):
+            raise AssertionError(f"total_combined_enhancement is not a valid number: {total_enhancement}")
+        if total_enhancement < 1.0:
+            raise AssertionError(f"total_combined_enhancement should be >= 1.0, got: {total_enhancement}")
+        if total_enhancement > 1e50:
+            raise AssertionError(f"total_combined_enhancement exceeds realistic bound (1e50), got: {total_enhancement}")
+        
         print(f"[OK] Quantum Tunneling: Working")
-        print(f"[OK] Electron Screening: {results['screening_energy']:.1f} eV")
-        print(f"[OK] Lattice Effects: {results['lattice_enhancement']:.2f}x")
-        print(f"[OK] Interface Dynamics: {results['interface_enhancement']:.1f}x")
-        print(f"[OK] Total Enhancement: {results['total_combined_enhancement']:.2e}")
+        print(f"[OK] Electron Screening: {results['screening_energy']:.1f} eV (validated: 0 to 1e6)")
+        print(f"[OK] Lattice Effects: {results['lattice_enhancement']:.2f}x (validated: >= 1.0)")
+        print(f"[OK] Interface Dynamics: {results['interface_enhancement']:.1f}x (validated: >= 1.0)")
+        print(f"[OK] Total Enhancement: {results['total_combined_enhancement']:.2e} (validated: 1.0 to 1e50)")
         
         # Validate against paper
         validation = sim.validate_against_paper()
@@ -52,17 +92,16 @@ def test_solvers():
     
     try:
         # Test Poisson-Schrödinger
-        from solvers.poisson_schrodinger import PoissonSchrodingerSolver
+        from solvers.poisson_schrodinger import PoissonSchrodingerSolver  # type: ignore
         solver = PoissonSchrodingerSolver()
         print(f"[OK] Poisson-Schrödinger Solver: {solver.N} grid points")
         
         # Test Monte Carlo
-        from solvers.monte_carlo import MonteCarloUncertainty, MonteCarloConfig
-        mc_config = MonteCarloConfig(n_samples=10, parallel=False)
+        from solvers.monte_carlo import MonteCarloUncertainty, MonteCarloConfig  # type: ignore
+        mc_config = MonteCarloConfig(n_samples=100, parallel=False)
         mc = MonteCarloUncertainty(mc_config)
         mc.setup_default_distributions()
-        print(f"[OK] Monte Carlo System: {len(mc.parameter_distributions)} parameters")
-        
+        print(f"[OK] Monte Carlo System: {len(mc.parameter_distributions)} parameters")        
         return True
     except Exception as e:
         print(f"[FAIL] Solvers test failed: {e}")
@@ -75,7 +114,7 @@ def test_ml_components():
     print("=" * 60)
     
     try:
-        from ml.parameter_optimizer import LENRParameterOptimizer, PatternRecognizer
+        from ml.parameter_optimizer import LENRParameterOptimizer, PatternRecognizer  # type: ignore
         
         # Test optimizer
         optimizer = LENRParameterOptimizer()
@@ -119,8 +158,8 @@ def test_api_import():
     print("=" * 60)
     
     try:
-        from main import app
-        from api import models, simulation, parameters, ml_endpoints
+        from main import app  # type: ignore
+        from api import models, simulation, parameters, ml_endpoints  # type: ignore
         
         print(f"[OK] FastAPI app imported successfully")
         print(f"[OK] API models defined")
@@ -140,7 +179,7 @@ def run_performance_test():
     print("=" * 60)
     
     try:
-        from core.integrated_simulation import IntegratedLENRSimulation, IntegratedParameters
+        from core.integrated_simulation import IntegratedLENRSimulation, IntegratedParameters  # type: ignore
         
         params = IntegratedParameters()
         sim = IntegratedLENRSimulation(params)

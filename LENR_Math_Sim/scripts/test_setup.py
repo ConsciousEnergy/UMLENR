@@ -5,8 +5,7 @@ import sys
 import os
 
 # Add backend to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'backend'))
-
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
 def test_imports():
     """Test that all core modules can be imported."""
     print("Testing imports...")
@@ -43,62 +42,70 @@ def test_quantum_tunneling():
     """Test quantum tunneling calculations."""
     print("\nTesting quantum tunneling calculations...")
     
-    from core.quantum_tunneling import QuantumTunneling, TunnelingParameters
-    
-    # Create calculator with custom parameters
-    params = TunnelingParameters(
-        particle1_mass=3.343583719e-27,  # Deuteron mass
-        particle2_mass=3.343583719e-27,
-        charge1=1.602176634e-19,  # Elementary charge
-        charge2=1.602176634e-19,
-        temperature=300.0,
-        electric_field=1e9,
-        screening_energy=25.0,  # Enhanced screening
-        coherence_factor=2.0,  # Some coherence
-        loading_ratio=0.95  # High loading
-    )
-    
-    tunneling = QuantumTunneling(params)
-    
-    # Test at different energies
-    test_energies = [1.0, 10.0, 100.0]
-    
-    print("\nEnergy (eV) | Base Prob | Enhanced Prob | Enhancement Factor")
-    print("-" * 65)
-    
-    for energy in test_energies:
-        result = tunneling.calculate_total_enhancement(energy)
-        print(f"{energy:10.1f} | {result['base_probability']:10.2e} | "
-              f"{result['final_probability']:13.2e} | {result['total_enhancement']:10.2e}")
-    
-    # Run a small Monte Carlo simulation
-    print("\nRunning Monte Carlo simulation (1000 samples)...")
-    sim_results = tunneling.simulate_tunneling_events(n_samples=1000)
-    
-    print(f"Mean probability: {sim_results['mean_probability']:.2e}")
-    print(f"Std deviation: {sim_results['std_probability']:.2e}")
-    print(f"95th percentile: {sim_results['percentiles']['p95']:.2e}")
-    
-    return True
+    try:
+        from core.quantum_tunneling import QuantumTunneling, TunnelingParameters  # type: ignore
+        
+        # Create calculator with custom parameters
+        params = TunnelingParameters(
+            particle1_mass=3.343583719e-27,  # Deuteron mass
+            particle2_mass=3.343583719e-27,
+            charge1=1.602176634e-19,  # Elementary charge
+            charge2=1.602176634e-19,
+            temperature=300.0,
+            electric_field=1e9,
+            screening_energy=25.0,  # Enhanced screening
+            coherence_factor=2.0,  # Some coherence
+            loading_ratio=0.95  # High loading
+        )
+        
+        tunneling = QuantumTunneling(params)
+        
+        # Test at different energies
+        test_energies = [1.0, 10.0, 100.0]
+        
+        print("\nEnergy (eV) | Base Prob | Enhanced Prob | Enhancement Factor")
+        print("-" * 65)
+        
+        for energy in test_energies:
+            result = tunneling.calculate_total_enhancement(energy)
+            print(f"{energy:10.1f} | {result['base_probability']:10.2e} | "
+                  f"{result['final_probability']:13.2e} | {result['total_enhancement']:10.2e}")
+        
+        # Run a small Monte Carlo simulation
+        print("\nRunning Monte Carlo simulation (1000 samples)...")
+        sim_results = tunneling.simulate_tunneling_events(n_samples=1000)
+        
+        print(f"Mean probability: {sim_results['mean_probability']:.2e}")
+        print(f"Std deviation: {sim_results['std_probability']:.2e}")
+        print(f"95th percentile: {sim_results['percentiles']['p95']:.2e}")
+        
+        return True
+    except Exception as e:
+        print(f"[FAIL] Quantum tunneling test failed: {e}")
+        return False
 
 
 def test_constants():
     """Test physical constants."""
     print("\nTesting physical constants...")
     
-    from utils import constants
-    
-    # Check some key constants
-    print(f"Reduced Planck constant: {constants.HBAR:.4e} J·s")
-    print(f"Elementary charge: {constants.E_CHARGE:.4e} C")
-    print(f"Deuteron mass: {constants.M_DEUTERON:.4e} kg")
-    print(f"D-D Coulomb barrier: {constants.D_D_COULOMB_BARRIER/1000:.1f} keV")
-    
-    # Test utility functions
-    thermal_energy = constants.get_thermal_energy(300.0)
-    print(f"Thermal energy at 300K: {thermal_energy:.4f} eV")
-    
-    return True
+    try:
+        from utils import constants  # type: ignore
+        
+        # Check some key constants
+        print(f"Reduced Planck constant: {constants.HBAR:.4e} J·s")
+        print(f"Elementary charge: {constants.E_CHARGE:.4e} C")
+        print(f"Deuteron mass: {constants.M_DEUTERON:.4e} kg")
+        print(f"D-D Coulomb barrier: {constants.D_D_COULOMB_BARRIER/1000:.1f} keV")
+        
+        # Test utility functions
+        thermal_energy = constants.get_thermal_energy(300.0)
+        print(f"Thermal energy at 300K: {thermal_energy:.4f} eV")
+        
+        return True
+    except Exception as e:
+        print(f"[FAIL] Constants test failed: {e}")
+        return False
 
 
 def test_all_physics_modules():
@@ -106,10 +113,10 @@ def test_all_physics_modules():
     print("\nTesting all physics modules...")
     
     try:
-        from core.electron_screening import ElectronScreening
-        from core.lattice_effects import LatticeEffects  
-        from core.interface_dynamics import InterfaceDynamics
-        from core.bubble_dynamics import BubbleDynamics
+        from core.electron_screening import ElectronScreening  # type: ignore
+        from core.lattice_effects import LatticeEffects  # type: ignore
+        from core.interface_dynamics import InterfaceDynamics  # type: ignore
+        from core.bubble_dynamics import BubbleDynamics  # type: ignore
         
         # Test electron screening
         screening = ElectronScreening()
@@ -141,7 +148,7 @@ def test_integrated_simulation():
     print("\nTesting integrated simulation...")
     
     try:
-        from core.integrated_simulation import IntegratedLENRSimulation, IntegratedParameters
+        from core.integrated_simulation import IntegratedLENRSimulation, IntegratedParameters  # type: ignore
         
         # Create simulation
         params = IntegratedParameters(

@@ -7,8 +7,8 @@ services:
     container_name: lenr_postgres
     environment:
       POSTGRES_DB: lenr_simulations
-      POSTGRES_USER: ${DB_USER:-lenr_user}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-secure_password}
+      POSTGRES_USER: ${DB_USER?Database user must be set}
+      POSTGRES_PASSWORD: ${DB_PASSWORD?Database password must be set}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -45,7 +45,7 @@ services:
       dockerfile: Dockerfile
     container_name: lenr_backend
     environment:
-      DATABASE_URL: postgresql://${DB_USER:-lenr_user}:${DB_PASSWORD:-secure_password}@postgres:5432/lenr_simulations
+      DATABASE_URL: postgresql://${DB_USER?Database user must be set}:${DB_PASSWORD?Database password must be set}@postgres:5432/lenr_simulations
       REDIS_URL: redis://redis:6379/0
       PYTHONUNBUFFERED: 1
       ENV: ${ENV:-development}
@@ -71,12 +71,10 @@ services:
       target: ${ENV:-development}
     container_name: lenr_frontend
     environment:
-      REACT_APP_API_URL: ${API_URL:-http://localhost:8000}
-      REACT_APP_WS_URL: ${WS_URL:-ws://localhost:8000/ws}
-      NODE_ENV: ${ENV:-development}
+      REACT_APP_API_URL: ${API_URL:-http://backend:8000}
+      REACT_APP_WS_URL: ${WS_URL:-ws://backend:8000/ws}
     volumes:
       - ./frontend:/app
-      - /app/node_modules
     ports:
       - "3000:3000"
     depends_on:
@@ -92,19 +90,20 @@ services:
       dockerfile: Dockerfile.jupyter
     container_name: lenr_jupyter
     environment:
-      DATABASE_URL: postgresql://${DB_USER:-lenr_user}:${DB_PASSWORD:-secure_password}@postgres:5432/lenr_simulations
+      DATABASE_URL: postgresql://${DB_USER?Database user must be set}:${DB_PASSWORD?Database password must be set}@postgres:5432/lenr_simulations
       REDIS_URL: redis://redis:6379/0
       JUPYTER_ENABLE_LAB: "yes"
-      JUPYTER_TOKEN: ${JUPYTER_TOKEN:-lenr_research_2025}
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN?Jupyter token must be set}
     volumes:
       - ./notebooks:/notebooks
-      - ./backend:/backend
       - ./data:/data
     ports:
       - "8888:8888"
     depends_on:
-      - postgres
-      - redis
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     networks:
       - lenr_network
     command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
@@ -114,7 +113,7 @@ services:
     image: grafana/grafana:latest
     container_name: lenr_grafana
     environment:
-      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD?Grafana admin password must be set}
       GF_INSTALL_PLUGINS: redis-datasource
     volumes:
       - grafana_data:/var/lib/grafana

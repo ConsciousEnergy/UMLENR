@@ -1,0 +1,30 @@
+{
+  "include": [
+    "backend",
+    "scripts"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.*"
+  ],
+  "extraPaths": [
+    "backend"
+  ],
+  "executionEnvironments": [
+    {
+      "root": "scripts",
+      "pythonVersion": "3.9",
+      "extraPaths": ["../backend"]
+    },
+    {
+      "root": "backend",
+      "pythonVersion": "3.9"
+    }
+  ],
+  "typeCheckingMode": "basic",
+  "reportMissingImports": "warning",
+  "reportMissingTypeStubs": false,
+  "pythonVersion": "3.9"
+}
+

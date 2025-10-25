@@ -2,15 +2,18 @@
 """Quick API functionality test."""
 
 import sys
-sys.path.insert(0, 'backend')
+from pathlib import Path
+
+# Add backend to path
+sys.path.insert(0, str(Path(__file__).parent.parent / 'backend'))
 
 # Test API imports
 try:
-    from main import app
-    from api.models import SimulationParameters, SimulationRequest
-    from api.simulation import router as sim_router
-    from api.parameters import router as param_router
-    from api.ml_endpoints import router as ml_router
+    from main import app  # type: ignore
+    from api.models import SimulationParameters, SimulationRequest  # type: ignore
+    from api.simulation import router as sim_router  # type: ignore
+    from api.parameters import router as param_router  # type: ignore
+    from api.ml_endpoints import router as ml_router  # type: ignore
     
     print("[OK] All API modules imported successfully")
     

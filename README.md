@@ -36,8 +36,9 @@ LENR has long been a subject of scientific curiosity and debate. Despite its pro
 ```bash
 git clone https://github.com/ConsciousEnergy/UMLENR.git
 cd UMLENR
-pip install -r requirements.txt
 ```
+
+**Note**: Individual simulations have their own dependencies. See specific simulation sections below for requirements. For the full mathematical simulation framework, see the [LENR Mathematical Simulation Framework](#lenr-mathematical-simulation-framework) section.
 
 ## Usage
 
@@ -140,17 +141,17 @@ This project implements advanced quantum mechanical simulations, including:
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository and navigate to the framework:
 ```bash
 git clone https://github.com/ConsciousEnergy/UMLENR.git
 cd UMLENR/LENR_Math_Sim
 ```
 
-**Note**: The LENR Mathematical Simulation Framework is located in the `LENR_Math_Sim/` directory. All commands below should be run from within that directory.
+**Important**: The LENR Mathematical Simulation Framework is a complete application located in the `LENR_Math_Sim/` directory. All subsequent commands must be run from within this directory (`UMLENR/LENR_Math_Sim/`).
 
 2. Set up Python environment:
 ```bash
-# Create virtual environment
+# Create virtual environment (from LENR_Math_Sim directory)
 python -m venv venv
 
 # Activate (Windows)
@@ -159,9 +160,11 @@ venv\Scripts\activate
 # Activate (Linux/Mac)
 source venv/bin/activate
 
-# Install dependencies
+# Install backend dependencies (path is relative to LENR_Math_Sim directory)
 pip install -r backend/requirements.txt
 ```
+
+**Note**: The `backend/requirements.txt` file contains all Python dependencies for the FastAPI backend, including scientific computing libraries (NumPy, SciPy), machine learning frameworks (PyTorch, TensorFlow), and visualization tools (PyVista, VTK).
 
 3. Set up Node environment:
 ```bash

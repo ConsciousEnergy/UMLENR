@@ -3,8 +3,7 @@ echo Starting LENR Simulation Framework...
 echo ==================================
 
 echo Starting backend API...
-start "LENR Backend" cmd /k "cd backend && uvicorn main:app --reload --host 0.0.0.0 --port 8000"
-
+start "LENR Backend" cmd /k "cd backend && uvicorn main:app --reload --host 127.0.0.1 --port 8000"
 timeout /t 3 /nobreak > NUL
 
 echo Starting frontend...
