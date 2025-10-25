@@ -68,6 +68,7 @@ frontend/.env.production.local
 Thumbs.db
 *.sublime-project
 *.sublime-workspace
+.specstory
 
 # Jupyter Notebooks
 .ipynb_checkpoints/

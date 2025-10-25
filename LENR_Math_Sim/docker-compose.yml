@@ -1,0 +1,150 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: lenr_postgres
+    environment:
+      POSTGRES_DB: lenr_simulations
+      POSTGRES_USER: ${DB_USER:-lenr_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-secure_password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - lenr_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-lenr_user}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: lenr_redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - lenr_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: lenr_backend
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-lenr_user}:${DB_PASSWORD:-secure_password}@postgres:5432/lenr_simulations
+      REDIS_URL: redis://redis:6379/0
+      PYTHONUNBUFFERED: 1
+      ENV: ${ENV:-development}
+    volumes:
+      - ./backend:/app
+      - ./data:/data
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - lenr_network
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  # Frontend UI
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: ${ENV:-development}
+    container_name: lenr_frontend
+    environment:
+      REACT_APP_API_URL: ${API_URL:-http://localhost:8000}
+      REACT_APP_WS_URL: ${WS_URL:-ws://localhost:8000/ws}
+      NODE_ENV: ${ENV:-development}
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - lenr_network
+    command: npm start
+
+  # Jupyter Lab for research and analysis
+  jupyter:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.jupyter
+    container_name: lenr_jupyter
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-lenr_user}:${DB_PASSWORD:-secure_password}@postgres:5432/lenr_simulations
+      REDIS_URL: redis://redis:6379/0
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:-lenr_research_2025}
+    volumes:
+      - ./notebooks:/notebooks
+      - ./backend:/backend
+      - ./data:/data
+    ports:
+      - "8888:8888"
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - lenr_network
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+
+  # Grafana for monitoring (optional)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: lenr_grafana
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+      GF_INSTALL_PLUGINS: redis-datasource
+    volumes:
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "3001:3000"
+    networks:
+      - lenr_network
+    profiles:
+      - monitoring
+
+  # Prometheus for metrics (optional)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: lenr_prometheus
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - lenr_network
+    profiles:
+      - monitoring
+
+networks:
+  lenr_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
+  grafana_data:
+  prometheus_data:

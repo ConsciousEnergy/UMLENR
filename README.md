@@ -146,6 +146,8 @@ git clone https://github.com/ConsciousEnergy/UMLENR.git
 cd UMLENR/LENR_Math_Sim
 ```
 
+**Note**: The LENR Mathematical Simulation Framework is located in the `LENR_Math_Sim/` directory. All commands below should be run from within that directory.
+
 2. Set up Python environment:
 ```bash
 # Create virtual environment
@@ -343,10 +345,12 @@ docker-compose -f docker-compose.test.yml up
 
 ## Documentation
 
-- [API Documentation](http://localhost:8000/docs) - Interactive API docs
-- [Physics Models](docs/physics/) - Detailed physics documentation
-- [User Guide](docs/user_guide/) - Usage instructions
-- [Development Guide](DEVELOPMENT_PLAN.md) - Development roadmap
+- [API Documentation](http://localhost:8000/docs) - Interactive API docs (when server is running)
+- [LENR_Math_Sim README](LENR_Math_Sim/README.md) - Framework-specific documentation
+- [Development Plan](LENR_Math_Sim/docs/DEVELOPMENT_PLAN.md) - Development roadmap
+- [API Documentation](LENR_Math_Sim/docs/API_DOCUMENTATION.md) - API reference
+- [Setup Instructions](LENR_Math_Sim/docs/SETUP_INSTRUCTIONS.md) - Detailed setup guide
+- [Project Structure](LENR_Math_Sim/docs/PROJECT_STRUCTURE.md) - Architecture overview
 
 ## Performance
 
