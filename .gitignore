@@ -1,0 +1,217 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+*.cover
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+.npm
+.yarn-integrity
+.yarn/
+*.tsbuildinfo
+
+# React/Frontend
+frontend/build/
+frontend/.eslintcache
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data and models
+data/simulations/
+data/models/*.pkl
+data/models/*.h5
+data/models/*.pt
+data/models/*.pth
+data/temp/
+*.csv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.nc
+
+# Logs
+logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+postgres_data/
+redis_data/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Backups
+backups/
+*.bak
+*.backup
+*.old
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Test coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.coverage.*
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
+site/
+
+# Monitoring
+grafana_data/
+prometheus_data/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Output files
+output/
+results/
+exports/
+
+# Secrets and credentials
+*.pem
+*.key
+*.crt
+*.p12
+credentials.json
+service-account.json
+
+# Package files
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Profiling
+*.prof
+*.lprof
+*.stats
+
+# Cache
+.cache/
+*.cache
+
+# Lock files (keep package-lock.json and yarn.lock)
+# Pipfile.lock
+
+# Custom
+local_settings.py
+instance/
+.webassets-cache
+*.sage.py
+
+# Virtual environments
+bin/
+include/
+lib/
+lib64/
+share/
+pyvenv.cfg
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
