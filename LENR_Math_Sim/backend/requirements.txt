@@ -17,8 +17,8 @@ vtk==9.3.0
 matplotlib==3.8.2
 
 # Machine Learning
-scikit-learn==1.4.0
-torch==2.1.2  # For neural network models
+scikit-learn==1.5.2  # Updated for security (CVE fixes)
+torch==2.5.1  # Updated for critical security vulnerabilities
 tensorflow==2.15.0  # Alternative ML framework
 bayesian-optimization==1.4.3
 
@@ -39,13 +39,13 @@ pytest-cov==4.1.0
 hypothesis==6.92.2  # Property-based testing
 
 # Development Tools
-black==23.12.1
+black==24.10.0  # Updated for ReDoS vulnerability fix
 ruff==0.1.11
 mypy==1.8.0
 ipython==8.19.0
 
 # API Documentation
-python-multipart==0.0.6
+python-multipart==0.0.12  # Updated for DoS and ReDoS vulnerabilities
 
 # Monitoring & Logging
 prometheus-client==0.19.0
@@ -57,7 +57,7 @@ redis==5.0.1
 
 # WebSocket Support
 websockets==12.0
-python-socketio==5.10.0
+python-socketio==5.11.4  # Updated for pickle deserialization RCE vulnerability
 
 # Numerical Optimization
 cvxpy==1.4.1  # Convex optimization
