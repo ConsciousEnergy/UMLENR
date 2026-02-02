@@ -3,6 +3,23 @@
 ## Overview
 This document tracks security vulnerability fixes applied to the LENR Mathematical Simulation Framework dependencies.
 
+## February 2026 - Dependabot Remediation (8 Alerts)
+
+The following dependency upgrades were applied to resolve all eight Dependabot security alerts in `LENR_Math_Sim/backend/requirements.txt`:
+
+| Package | Previous | Updated | Alerts Addressed |
+|---------|----------|---------|------------------|
+| torch | 2.5.1 | **2.8.0** | #9 (RCE torch.load), #8 (resource release), #7 (local DoS) |
+| python-multipart | 0.0.12 | **0.0.22** | #12 (arbitrary file write), #6 (DoS boundary) |
+| python-socketio | 5.11.4 | **>=5.14.0,<6** | #10 (pickle RCE) |
+| marshmallow | 3.20.1 | **3.26.2** | #11 (DoS in Schema.load(many)) |
+
+**Additional change**: `sympy` was relaxed to `>=1.13.3` to satisfy torch 2.8.0's dependency.
+
+**Code audit**: No `torch.load`, `UPLOAD_DIR`/`UPLOAD_KEEP_FILENAME`, or `Schema.load(..., many=True)` usage found in backend; no code changes required.
+
+---
+
 ## Vulnerabilities Fixed
 
 ### Critical Severity
@@ -197,6 +214,6 @@ For security concerns or questions:
 
 ---
 
-**Last Updated**: October 25, 2025
-**Next Review**: November 25, 2025
+**Last Updated**: February 2, 2026
+**Next Review**: March 2, 2026
 

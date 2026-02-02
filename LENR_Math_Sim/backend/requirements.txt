@@ -7,7 +7,7 @@ python-dotenv==1.0.0
 # Scientific Computing
 numpy==1.26.3
 scipy==1.12.0
-sympy==1.12
+sympy>=1.13.3  # Required by torch 2.8.0
 pandas==2.1.4
 numba==0.59.0  # For JIT compilation of numerical code
 
@@ -18,7 +18,7 @@ matplotlib==3.8.2
 
 # Machine Learning
 scikit-learn==1.5.2  # Updated for security (CVE fixes)
-torch==2.5.1  # Updated for critical security vulnerabilities
+torch==2.8.0  # CVE-2025-32434, CVE-2025-3730, local DoS fixes
 tensorflow==2.15.0  # Alternative ML framework
 bayesian-optimization==1.4.3
 
@@ -30,7 +30,7 @@ alembic==1.13.1  # Database migrations
 
 # Data Validation & Serialization
 pydantic-settings==2.1.0
-marshmallow==3.20.1
+marshmallow==3.26.2  # CVE-2025-68480 DoS in Schema.load(many)
 
 # Testing
 pytest==7.4.4
@@ -45,7 +45,7 @@ mypy==1.8.0
 ipython==8.19.0
 
 # API Documentation
-python-multipart==0.0.12  # Updated for DoS and ReDoS vulnerabilities
+python-multipart==0.0.22  # CVE-2026-24486, CVE-2024-53981
 
 # Monitoring & Logging
 prometheus-client==0.19.0
@@ -57,7 +57,7 @@ redis==5.0.1
 
 # WebSocket Support
 websockets==12.0
-python-socketio==5.11.4  # Updated for pickle deserialization RCE vulnerability
+python-socketio>=5.14.0,<6  # CVE-2025-61765 pickle RCE fix
 
 # Numerical Optimization
 cvxpy==1.4.1  # Convex optimization
