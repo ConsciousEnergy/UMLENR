@@ -2,12 +2,12 @@
 fastapi==0.109.0
 uvicorn[standard]==0.27.0
 pydantic==2.5.3
-python-dotenv==1.0.0
+python-dotenv==1.2.2  # CVE-2026-28684 symlink overwrite in set_key
 
 # Scientific Computing
 numpy==1.26.3
 scipy==1.12.0
-sympy>=1.13.3  # Required by torch 2.8.0
+sympy>=1.13.3  # Required by torch 2.10.0
 pandas==2.1.4
 numba==0.59.0  # For JIT compilation of numerical code
 
@@ -18,7 +18,7 @@ matplotlib==3.8.2
 
 # Machine Learning
 scikit-learn==1.5.2  # Updated for security (CVE fixes)
-torch==2.8.0  # CVE-2025-32434, CVE-2025-3730, local DoS fixes
+torch==2.10.0  # CVE-2026-24747 (+ prior torch.load/DoS advisories); floor was ~>2.9.1
 tensorflow==2.15.0  # Alternative ML framework
 bayesian-optimization==1.4.3
 
@@ -33,19 +33,19 @@ pydantic-settings==2.1.0
 marshmallow==3.26.2  # CVE-2025-68480 DoS in Schema.load(many)
 
 # Testing
-pytest==7.4.4
-pytest-asyncio==0.23.3
+pytest==9.0.3  # CVE-2025-71176 tmpdir handling
+pytest-asyncio==1.3.0  # Required for pytest 9 (0.23.x pins pytest<9)
 pytest-cov==4.1.0
 hypothesis==6.92.2  # Property-based testing
 
 # Development Tools
-black==26.3.1  # Updated for CVE-2026-32274 arbitrary file-write fix
+black==26.10.1  # CVE-2026-114134 GitHub Action required-version validation
 ruff==0.1.11
 mypy==1.8.0
 ipython==8.19.0
 
 # API Documentation
-python-multipart==0.0.22  # CVE-2026-24486, CVE-2024-53981
+python-multipart==0.0.27  # CVE-2026-42561 unbounded multipart headers (+ prior advisories); floor was ~>0.0.26
 
 # Monitoring & Logging
 prometheus-client==0.19.0
